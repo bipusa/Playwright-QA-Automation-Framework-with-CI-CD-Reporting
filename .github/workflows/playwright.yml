@@ -23,8 +23,8 @@ jobs:
 
     - name: Run Playwright tests
       name: Run tests
-        run: npx playwright test
-        env:
+      run: npx playwright test
+      env:
           CI: true
 
     - name: Upload HTML report
