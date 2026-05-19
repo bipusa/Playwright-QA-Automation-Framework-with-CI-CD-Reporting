@@ -5,7 +5,7 @@ const EventsPage = require('../pages/EventsPage');
 const BookingPage = require('../pages/BookingPage');
 
 
-test.only('User Login and Create Event Module (POM)', async ({ page }) => {
+test('User Login and Create Event Module (POM)', async ({ page }) => {
   const login = new LoginPage(page);
   const admin = new AdminPage(page);
   const events = new EventsPage(page);
@@ -15,6 +15,7 @@ test.only('User Login and Create Event Module (POM)', async ({ page }) => {
 
   await login.goto();
   await login.login('thapa.bipusa@outlook.com', 'Eventhub@1234');
+  await expect (page.getByText("Browse Events")).toBeVisible();
 
   await admin.navigateToCreateEvent();
   await admin.createEvent(eventTitle);
