@@ -27,7 +27,7 @@ jobs:
           CI: true
 
     - name: Upload HTML report
-    - uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
@@ -35,13 +35,12 @@ jobs:
         retention-days: 30
 
     - name: Upload Playwright Test Results
-    - uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       if: always()
       with:
-          name: playwright-test-artifacts
-          path: |
-            test-results/
-          retention-days: 30
+        name: playwright-test-artifacts
+        path: test-results/
+        retention-days: 30
 
     
     
