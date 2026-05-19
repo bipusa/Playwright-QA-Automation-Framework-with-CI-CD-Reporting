@@ -15,7 +15,7 @@ test('User Login and Create Event Module (POM)', async ({ page }) => {
 
   await login.goto();
   await login.login('thapa.bipusa@outlook.com', 'Eventhub@1234');
-  await expect (page.getByText("Browse Events")).toBeVisible();
+  await expect (page.getByText("Browse Events").first()).toBeVisible();
 
   await admin.navigateToCreateEvent();
   await admin.createEvent(eventTitle);

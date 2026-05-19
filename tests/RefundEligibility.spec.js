@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const LoginPage = require('../pages/LoginPage');
 
-test.only ("Refundable Ticket", async ({ page }) => {
+test("Refundable Ticket", async ({ page }) => {
     const login = new LoginPage(page);
 
     await login.goto();

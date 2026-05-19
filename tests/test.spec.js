@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { TIMEOUT } = require('node:dns');
 
-test('User Login and Create Event Module', async ({ page }) => {
+test.only('User Login and Create Event Module', async ({ page }) => {
     const baseURL = 'https://eventhub.rahulshettyacademy.com';
 
     await page.goto('https://eventhub.rahulshettyacademy.com/login');
