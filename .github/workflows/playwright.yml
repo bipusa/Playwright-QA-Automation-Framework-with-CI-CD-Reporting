@@ -22,7 +22,6 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      name: Run tests
       run: npx playwright test
       env:
           CI: true
